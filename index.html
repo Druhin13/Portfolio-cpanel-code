@@ -3,484 +3,343 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Hi, I'm Druhin Tarafder. A self-taught, 18 years old ux designer & front end dev, focusing on user interface and interaction designs ">
+	<meta name="description" content="Hi, I'm Druhin Tarafder. A self-taught, 18 years old ux designer & front end dev, focusing on user interface and interaction designs">
 	<meta name="keywords" content="Druhin,Tarafder,Druh.in,Instagram,Twitter,Portfolio,Linkedin,Dribbble,Github">
 	<title>Druhin Tarafder</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/hxi8bqp.css">
 	<link rel="shortcut icon" href="assets/favicon.ico">
 
+
     <style>
- * {
-	padding: 0;
+
+        * {
 	margin: 0;
+	padding: 0;
 }
 
-
-.bg {
-	position: absolute;
-	left: 0%;
-	width: 0%;
-	height: 100%;
-	background-image: linear-gradient(135deg, #000428, #004e92);
-	z-index: -1;
+html {
+	scroll-behavior: smooth;
 }
 
-.nav-on {
-	position: absolute;
-	width: 100vw;
-	height: 0vh;
-	background: rgba(0, 0, 0, 0.95);
+body {
 	overflow-x: hidden;
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+
+::-webkit-scrollbar {
+	background: #000;
+	width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 10px #00000070;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #302b63, #000428);
+}
+
+
+
+.gallery1 {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.gallery2 {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.gallery3 {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.gallery-item {
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 50vw;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.1);
+
+}
+
+.top {
 	text-align: center;
-	z-index: 10;
-	transition: all 0.75s;
-}
-
-.nav-on h2,
-.nav-on h3,
-.nav-on h4 {
-	color: white;
-	font-family: Montserrat, sans-serif;
-	font-size: 1.7vh;
-	font-weight: 300;
-	font-stretch: normal;
-	font-style: normal;
-	letter-spacing: 1.14px;
-	margin-top: 2vh;
-}
-
-.nav-on a {
-	text-decoration: none;
-}
-
-.nav-on h3 {
-	margin-top: 30vh;
-}
-
-.nav-on h4 {
-	margin-top: 10vh;
-}
-
-.close {
-	height: 2vh;
-	width: 5vw;
-	position: absolute;
-	right: 0;
-	margin-right: 5vw;
-	margin-top: 7vw;
-}
-
-
-section {
-	height: 55vh;
+	height: 85vh;
 	width: 100vw;
+	background-image: linear-gradient(to bottom, #000428, #302b63);
+}
+
+.top-menu {
 	position: absolute;
-	margin-top: 14vh;
+	width: 100vw;
+	background-color: #06092f;
+	display: flex;
+	z-index: 10;
+	position: fixed;
+	height: 9.5vh;
 }
 
 .logo {
-	width: 20vw;
-	height: 100%;
-	margin-left: 5vw;
-	margin-top: 7vw;
-}
-
-.menu {
-	height: 1.5vh;
-	width: 5vw;
-	position: absolute;
-	right: 0;
-	margin-right: 5vw;
-	margin-top: 7vw;
-}
-
-.hero_img_container {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-
-.hero_img {
-	background-position: 50%;
-	right: 0;
-	bottom: 0;
-	width: 69.9vw;
-	height: 50.9vh;
-	object-fit: cover;
-	opacity: 0;
-	animation: image-appear 0.0001s linear forwards;
-	animation-delay: 2.2s;
-	box-shadow: 10px 10px 10px 0 #00000029;
-}
-
-
-@keyframes image-appear {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-
-.block {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 0%;
-	height: 100%;
-	background: #001845;
-	animation: block-appear 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-	animation-delay: 1.5s;
-}
-
-@keyframes block-appear {
-	0% {
-		left: 0;
-		width: 0%;
-	}
-
-	50% {
-		left: 0;
-		width: 100%;
-	}
-
-	100% {
-		left: 100%;
-		width: 0%;
-	}
-}
-
-
-
-
-
-
-
-
-section div h1 {
-	position: absolute;
-	color: white;
-	font-family: Montserrat, sans-serif;
-	font-size: 5.5vh;
-	font-weight: normal;
-	font-stretch: normal;
-	font-style: normal;
-	letter-spacing: 1.14px;
-	text-align: left;
-	margin-left: 6.5vw;
-	z-index: 2;
-}
-
-section div h2 {
-	position: absolute;
-	color: white;
-	font-family: Montserrat, sans-serif;
-	font-size: 2.5vh;
-	font-weight: normal;
-	font-stretch: normal;
-	font-style: normal;
-	letter-spacing: 1.14px;
-	text-align: left;
-	margin-left: 33vw;
-	margin-top: 6.5vh;
-	z-index: 2;
-}
-
-section h3 {
-	position: absolute;
-	color: white;
-	font-family: Montserrat, sans-serif;
-	font-size: 1.5vh;
-	font-weight: 300;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: 1.53;
-	letter-spacing: 1.14px;
-	text-align: left;
-	margin-left: 5vw;
-	margin-top: 16vh;
-	z-index: 2;
-	width: 45vw;
-}
-
-
-
-.bottom {
-	height: 20vh;
-	width: 100vw;
-	position: absolute;
-	bottom: 0;
-}
-
-.works {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 16vh;
-	width: 51.9vw;
-	-webkit-backdrop-filter: blur(30px);
-	backdrop-filter: blur(30px);
-	box-shadow: 10px 10px 10px 0 #00000029;
-	background-color: #000c20;
-	opacity: 0;
-	animation: image-appear 0.0001s linear forwards;
-	animation-delay: 2.2s;
-	box-shadow: 10px 10px 10px 0 #00000029;
-	background: url('./assets/works.png') no-repeat;
-	background-position: 50%;
-	background-size: cover;
-}
-
-@keyframes image-appear {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
-
-.block2 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0%;
-	height: 16vh;
-	background: #001845;
-	animation: block-appear2 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-	animation-delay: 1.5s;
-}
-
-@keyframes block-appear2 {
-	0% {
-		left: 0;
-		width: 0vw;
-	}
-
-	50% {
-		left: 0;
-		width: 51.9vw;
-	}
-
-	100% {
-		left: 0%;
-		width: 0vw;
-	}
-}
-
-
-
-
-
-
-
-.works h1 {
-	color: white;
-	font-family: Montserrat, sans-serif;
-	font-size: 2.5vh;
-	font-weight: 300;
-	font-stretch: normal;
-	font-style: normal;
-	letter-spacing: 1.14px;
-	text-align: left;
-	margin-left: 5vw;
-	margin-top: -1.5vh;
-	z-index: 2.5;
+	margin-top: 3vh;
+	width: 6.71vw;
+	margin-left: 2vw;
 }
 
 .resume {
-	text-align: center;
 	position: absolute;
-	bottom: 0;
 	right: 0;
-	height: 5.65vh;
-	width: 36vw;
-	-webkit-backdrop-filter: blur(30px);
-	backdrop-filter: blur(30px);
-	box-shadow: 10px 10px 10px 0 #00000029;
-	background-color: #000c20;
+	margin-top: 3vh;
+	width: 6vw;
+	margin-right: 2vw;
 }
 
-.resume h1 {
-	color: white;
-	font-family: Montserrat, sans-serif;
-	font-size: 1.75vh;
-	font-weight: 300;
+.name {
+	position: absolute;
+	margin-top: -20vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.name h2 {
+	height: 6vh;
+	font-family: acumin-pro, HelveticaNeue;
+	font-size: 6vh;
+	font-weight: lighter;
 	font-stretch: normal;
 	font-style: normal;
-	letter-spacing: 1.14px;
-	margin-top: 1.75vh;
-	z-index: 2;
+	line-height: 1.21;
+	letter-spacing: normal;
+	text-align: left;
+	color: #c9c9c9;
 }
 
 
+.name h2 b {
+	color: #ffffff;
+	border-bottom: 1.5px solid currentColor;
+}
 
+a {
+	text-decoration: none;
+}
 
+.top h3 {
+	position: absolute;
+	margin-top: -8vh;
+	font-family: acumin-pro, HelveticaNeue;
+	font-size: 2.5vh;
+	font-weight: lighter;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.2;
+	letter-spacing: normal;
+	text-align: left;
+	color: #c9c9c9;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
+.top h3 b {
+	color: #ffffff;
+}
 
-@media (min-width:768px) {
+.social {
+	margin-top: 5vh;
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.social img {
+	width: 2.7vw;
+	padding-right: 0.5vw;
+}
+
+.connect {
+	position: absolute;
+	display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 12vh;
+}
+
+.connect h4 {
+	font-size: 2.25vh;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.2;
+	letter-spacing: normal;
+	text-align: left;
+	color: #c9c9c9;
+	border-bottom: 0.5px solid currentColor;
 
 }
 
-    </style>
+.connect h5 {
+	margin-left: 3vw;
+	font-size: 2.25vh;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.2;
+	letter-spacing: normal;
+	text-align: left;
+	color: #c9c9c9;
+	border-bottom: 0.5px solid currentColor;
+}
+
+.top > img {
+	width: 2vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 25vh;
+}
+
+.footer {
+	height: 20vh;
+	background-color: #2f2a62;
+	text-align: center;
+}
+
+.social2 {
+	margin-top: 8vh;
+	display: flex;
+	display: inline-block
+}
+
+.social2 img {
+	width: 2.25vw;
+	padding-right: 0.5vw;
+}
+
+.footer a {
+	text-decoration: none;
+}
+
+</style>
+
+
 
 </head>
 
 <body>
 
 
-	<div class="bg"></div>
+	<div class="top">
 
-	<div id="nav-on" class="nav-on">
-		<img id="close" onclick="closeNav()" class="close" src="assets/close.svg">
-
-		<a target="_blank" href="https://www.instagram.com/druhintarafder/">
-			<h3>Instagram</h3>
-		</a>
-		<a target="_blank" href="https://twitter.com/Druhin13">
-			<h2>Twitter</h2>
-		</a>
-		<a target="_blank" href="https://dribbble.com/druhin">
-			<h2>Dribbble</h2>
-		</a>
-		<a target="_blank" href="https://github.com/druhin13">
-			<h2>Github</h2>
-		</a>
-		<a target="_blank" href="https://in.linkedin.com/in/druhin13">
-			<h2>Linkedin</h2>
-		</a>
-		<a href="tel:917003617196">
-			<h4>+91 7003617196</h4>
-		</a>
-		<a href="mailto:contact@druh.in">
-			<h2>contact@druh.in</h2>
-		</a>
-	</div>
-
-	<nav class="navbar">
-		<a href="https://druh.in">
-			<img class="logo" src="assets/logo.png">
-		</a>
-
-		<img id="menu" onclick="openNav()" class="menu" src="assets/menu.svg">
-	</nav>
-
-	<section>
-		<a target="_blank" href="https://www.google.com/search?q=druhin+tarafder">
-			<div>
-				<h1>DRUHIN</h1>
-				<h2>TARAFDER</h2>
-			</div>
-		</a>
-
-		<div class="hero_img_container">
-			<img class="hero_img" src="assets/mainimg-min.png">
-			<div class="block"></div>
+		<div class="top-menu">
+			<a href="https://druh.in"><img class="logo" src="assets/logo.svg"></a>
+			<a href="https://drive.google.com/file/d/1cKwaXFuobNxabyCev4IlQ1FtbUMGHTPm/view?usp=sharing" target="_blank"><img class="resume" src="assets/Resume.svg"></a>
 		</div>
 
-		<h3>self-taught, 18 years old ux designer & front end dev, focusing on user interface and interaction designs</h3>
-	</section>
+		<div class="name">
+			<h2>Hi! I am <a href="https://www.google.com/search?q=druhin+tarafder"><b>Druhin Tarafder</b></a></h2>
+		</div>
 
-	<div class="bottom">
-		<a target="_blank" href="https://druh.in/works.html">
-			<div class="works">
-				<h1>WORKS</h1>
-			</div>
-			<div class="block2"></div>
-		</a>
+		<h3>I am an <b>ui/ux designer</b> & <b>front end developer</b>, from<br>
+			<b>Kolkata - India</b>, working on mobile and web design</h3>
 
-		<a target="_blank" href="https://druh.in/resume.html">
-			<div class="resume">
-				<h1>RESUME</h1>
-			</div>
-		</a>
+		<div class="social">
+			<a href="https://dribbble.com/druhin"><img src="assets/dribbble.svg"></a>
+			<a href="https://www.facebook.com/druhin13"><img src="assets/facebook.svg"></a>
+			<a href="https://twitter.com/druhin13"><img src="assets/twitter.svg"></a>
+			<a href="https://www.linkedin.com/in/druhin13/"><img src="assets/linkedin.svg"></a>
+			<a href="https://github.com/Druhin13"><img src="assets/github.svg"></a>
+		</div>
+
+		<div class="connect">
+			<a href="tel:+917003617196">
+				<h4>+91 7003617196</h4>
+			</a>
+			<a href="mailto:contact@druh.in">
+				<h5>contact@druh.in</h5>
+			</a>
+		</div>
+
+		<a href="#projects"><img src="assets/down%20arrow.svg"></a>
+
 	</div>
 
 
-	<!-- gsap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-	<script>
-    //bg
-TweenMax.to(".bg", 2, {
-	width: "100vw",
-	ease: Expo.easeInOut
-})
+	<div id="projects" class="projects">
 
-// navbar - (logo - ham menu)
-TweenMax.from(".navbar", 1.5, {
-	delay: 3.5,
-	opacity: 0,
-	y: 25,
-	ease: Expo.easeInOut
-})
+		<div class="gallery1">
 
-// first name
-TweenMax.from("section div h1", 1.5, {
-	delay: 1.6,
-	opacity: 0,
-	y: 50,
-	ease: Expo.easeInOut
-})
+			<div class="gallery-item">
+				<img class="gallery-image" src="assets/project1.png" alt="project1">
+			</div>
 
-// last name
-TweenMax.from("section div h2", 1.5, {
-	delay: 2,
-	opacity: 0,
-	y: 50,
-	ease: Expo.easeInOut
-})
+			<div class="gallery-item">
+				<img class="gallery-image" src="assets/project2.png" alt="project2">
+			</div>
 
-// description
-TweenMax.from("section h3", 1.5, {
-	delay: 3,
-	opacity: 0,
-	y: 50,
-	ease: Expo.snap
-})
-
-//works-text
-TweenMax.from(".works h1", 1.5, {
-	delay: 3,
-	opacity: 0,
-	y: 50,
-	ease: Expo.snap
-})
-
-// resume-box
-TweenMax.from(".resume", 1.5, {
-	delay: 3.5,
-	opacity: 0,
-	y: 25,
-	ease: Expo.easeInOut
-})
-
-var image = document.images[3]
-var bigimage = document.createElement("img")
-
-bigimage.onload = function () {
-	image.src = this.src
-}
+		</div>
 
 
-setTimeout(function () {
-	bigimage.src = "./assets/mainimg.png";
-}, 50)
+		<div class="gallery2">
+
+			<div class="gallery-item">
+				<img class="gallery-image" src="assets/project3.png" alt="project3">
+			</div>
+
+			<div class="gallery-item">
+				<img class="gallery-image" src="assets/project4.png" alt="project4">
+			</div>
+
+		</div>
+
+		<div class="gallery3">
+
+			<div class="gallery-item">
+				<img class="gallery-image" src="assets/project5.png" alt="project5">
+			</div>
+
+			<a href="https://dribbble.com/druhin" target="_blank">
+				<div class="gallery-item">
+					<img class="gallery-image" src="assets/project6.png" alt="project6">
+				</div>
+			</a>
+		</div>
+
+	</div>
 
 
-function openNav() {
-	document.getElementById('nav-on').style.height = "100vh";
-}
+	<div class="footer">
 
-function closeNav() {
-	document.getElementById('nav-on').style.height = "0vh";
-}
- 
-    </script>
+		<div class="social2">
+			<a href="https://dribbble.com/druhin"><img src="assets/dribbble.svg"></a>
+			<a href="https://www.facebook.com/druhin13"><img src="assets/facebook.svg"></a>
+			<a href="https://twitter.com/druhin13"><img src="assets/twitter.svg"></a>
+			<a href="https://www.linkedin.com/in/druhin13/"><img src="assets/linkedin.svg"></a>
+			<a href="https://github.com/Druhin13"><img src="assets/github.svg"></a>
+		</div>
+
+	</div>
 
 
 </body>
