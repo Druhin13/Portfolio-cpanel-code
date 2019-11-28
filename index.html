@@ -26,6 +26,7 @@ body {
 	overflow-x: hidden;
 	min-height: 100vh;
 	background-color: #fafafa;
+	background-color: #2f2a62;
 }
 
 
@@ -46,25 +47,50 @@ body {
 
 
 .gallery1 {
+	background-color: #2f2a62;
+	opacity: 0;
 	display: flex;
 	margin: 0;
 	padding: 0;
+	animation: easein4 0.5s forwards 4s ease-in;
 }
 
+
+@keyframes easein4 {
+	0% {
+		transform: translateY(20%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+
+
 .gallery2 {
+	opacity: 0;
+	background-color: #2f2a62;
 	display: flex;
 	margin: 0;
 	padding: 0;
+	animation: easein4 0.5s forwards 4s ease-in;
 }
 
 .gallery3 {
+	opacity: 0;
+	background-color: #2f2a62;
 	display: flex;
 	margin: 0;
 	padding: 0;
+	animation: easein4 0.5s forwards 4s ease-in;
 }
 
 .gallery-item {
 	overflow: hidden;
+	background-color: #2f2a62;
 }
 
 .gallery-image {
@@ -73,6 +99,7 @@ body {
 	object-fit: cover;
 	transition: transform 400ms ease-out;
 }
+
 
 .gallery-image:hover {
 	transform: scale(1.1);
@@ -87,6 +114,7 @@ body {
 }
 
 .top-menu {
+	opacity: 0;
 	position: absolute;
 	width: 100vw;
 	background-color: #06092f;
@@ -94,7 +122,23 @@ body {
 	z-index: 10;
 	position: fixed;
 	height: 9.5vh;
+	animation: easein3 0.5s forwards 4s ease-in;
 }
+
+
+@keyframes easein3 {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
 
 .logo {
 	margin-top: 3vh;
@@ -110,40 +154,54 @@ body {
 	margin-right: 2vw;
 }
 
-.name {
+.top h2 {
+	width: 100vw;
+	background-color: #ffffff00;
+	margin-top: -18vh;
 	position: absolute;
-	margin-top: -20vh;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.name h2 {
-	height: 6vh;
+	height: 8vh;
 	font-family: acumin-pro, HelveticaNeue;
 	font-size: 6vh;
 	font-weight: lighter;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.21;
+	line-height: 1.2;
 	letter-spacing: normal;
-	text-align: left;
+	text-align: center;
 	color: #c9c9c9;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: easein 1s forwards 0s ease-in;
 }
 
 
-.name h2 b {
+@keyframes easein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.top h2 a b {
 	color: #ffffff;
 	border-bottom: 1.5px solid currentColor;
 }
+
+
 
 a {
 	text-decoration: none;
 }
 
 .top h3 {
+	width: 30vw;
 	position: absolute;
-	margin-top: -8vh;
+	margin-top: -7vh;
 	font-family: acumin-pro, HelveticaNeue;
 	font-size: 2.5vh;
 	font-weight: lighter;
@@ -151,11 +209,13 @@ a {
 	font-style: normal;
 	line-height: 1.2;
 	letter-spacing: normal;
-	text-align: left;
+	text-align: center;
 	color: #c9c9c9;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	opacity: 0;
+	animation: easein 1s forwards 1s linear;
 }
 
 .top h3 b {
@@ -171,18 +231,56 @@ a {
 	transform: translate(-50%, -50%);
 }
 
+
+@keyframes easein2 {
+	0% {
+		transform: translateY(60%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+
 .social img {
+	opacity: 0;
 	width: 2.7vw;
 	padding-right: 0.5vw;
 }
 
+.dribbble {
+	animation: easein2 0.5s forwards 2s ease-in;
+}
+
+.facebook {
+	animation: easein2 0.5s forwards 2.05s ease-in;
+}
+
+.twitter {
+	animation: easein2 0.5s forwards 2.1s ease-in;
+}
+
+.linkedin {
+	animation: easein2 0.5s forwards 2.15s ease-in;
+}
+
+.github {
+	animation: easein2 0.5s forwards 2.2s ease-in;
+}
+
+
 .connect {
+	opacity: 0;
 	position: absolute;
 	display: flex;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-top: 12vh;
+	animation: easein 0.5s forwards 3s linear;
 }
 
 .connect h4 {
@@ -211,15 +309,6 @@ a {
 	border-bottom: 0.5px solid currentColor;
 }
 
-.top > img {
-	width: 2vw;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	margin-top: 25vh;
-}
-
 .footer {
 	height: 20vh;
 	background-color: #2f2a62;
@@ -241,6 +330,105 @@ a {
 	text-decoration: none;
 }
 
+
+
+
+
+/* mobile css */
+
+@media(max-width : 1080px) {
+	.top-menu {
+		height: 7.5vh;
+	}
+
+	.logo {
+		margin-top: 2.65vh;
+		width: 15.71vw;
+		margin-left: 4vw;
+	}
+
+	.resume {
+		position: absolute;
+		right: 0;
+		margin-top: 2.65vh;
+		width: 15vw;
+		margin-right: 4vw;
+	}
+
+	.top h2 {
+		margin-top: -18vh;
+		height: 6vh;
+		font-size: 3.8vh;
+	}
+
+	.top h3 {
+		width: 70vw;
+		margin-top: -9vh;
+		font-size: 2.1vh;
+	}
+
+	.social {
+		margin-top: 4vh;
+	}
+
+	.social img {
+		width: 7.5vw;
+		padding-right: 1.5vw;
+	}
+
+	.connect {
+		margin-top: 12vh;
+		text-align: center;
+	}
+
+	.connect h4 {
+		font-size: 1.8vh;
+	}
+
+	.connect h5 {
+		margin-left: 4.5vw;
+		font-size: 1.8vh;
+	}
+
+	.gallery1 {
+		display: block;
+	}
+
+	.gallery2 {
+		display: block;
+	}
+
+	.gallery3 {
+		display: block;
+	}
+
+	.gallery-item {
+		overflow: hidden;
+		background-color: #2f2a62;
+	}
+
+	.gallery-image {
+		display: block;
+		width: 100vw;
+		object-fit: cover;
+		transition: transform 400ms ease-out;
+	}
+
+	.footer {
+		height: 15vh;
+	}
+
+	.social2 {
+		margin-top: 7vh;
+	}
+
+	.social2 img {
+		width: 6vw;
+		padding-right: 1.25vw;
+	}
+
+}
+
 </style>
 
 
@@ -253,35 +441,33 @@ a {
 	<div class="top">
 
 		<div class="top-menu">
-			<a href="https://druh.in"><img class="logo" src="assets/logo.svg"></a>
+			<a href="https://druh.in"><img class="logo" src="assets/logo.PNG"></a>
 			<a href="https://drive.google.com/file/d/1cKwaXFuobNxabyCev4IlQ1FtbUMGHTPm/view?usp=sharing" target="_blank"><img class="resume" src="assets/Resume.svg"></a>
 		</div>
 
-		<div class="name">
-			<h2>Hi! I am <a href="https://www.google.com/search?q=druhin+tarafder"><b>Druhin Tarafder</b></a></h2>
-		</div>
 
-		<h3>I am a <b>ui/ux designer</b> & <b>front end developer</b>, from<br>
+		<h2>Hi! I am <a href="https://www.google.com/search?q=druhin+tarafder"><b>Druhin Tarafder</b></a></h2>
+
+
+		<h3>I am a <b>ui/ux designer</b> & <b>front end developer</b>, from
 			<b>Kolkata - India</b>, working on mobile and web design</h3>
 
 		<div class="social">
-			<a href="https://dribbble.com/druhin" target="_blank"><img src="assets/dribbble.svg"></a>
-			<a href="https://www.facebook.com/druhin13" target="_blank"><img src="assets/facebook.svg"></a>
-			<a href="https://twitter.com/druhin13" target="_blank"><img src="assets/twitter.svg"></a>
-			<a href="https://www.linkedin.com/in/druhin13/" target="_blank"><img src="assets/linkedin.svg"></a>
-			<a href="https://github.com/Druhin13" target="_blank"><img src="assets/github.svg"></a>
+			<a href="https://dribbble.com/druhin" target="_blank"><img class="dribbble" src="assets/dribbble.svg"></a>
+			<a href="https://www.facebook.com/druhin13" target="_blank"><img class="facebook" src="assets/facebook.svg"></a>
+			<a href="https://twitter.com/druhin13" target="_blank"><img class="twitter" src="assets/twitter.svg"></a>
+			<a href="https://www.linkedin.com/in/druhin13/" target="_blank"><img class="linkedin" src="assets/linkedin.svg"></a>
+			<a href="https://github.com/Druhin13" target="_blank"><img class="github" src="assets/github.svg"></a>
 		</div>
 
 		<div class="connect">
 			<a href="tel:+917003617196">
-				<h4>+91 7003617196</h4>
+				<h4>+917003617196</h4>
 			</a>
 			<a href="mailto:contact@druh.in">
 				<h5>contact@druh.in</h5>
 			</a>
 		</div>
-
-		<a href="#projects"><img src="assets/down%20arrow.svg"></a>
 
 	</div>
 
