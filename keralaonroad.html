@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Hi, I'm Druhin Tarafder. A self-taught, 18 years old ux designer & front end dev, focusing on user interface and interaction designs">
+	<meta name="keywords" content="Druhin,Tarafder,Druh.in,Instagram,Twitter,Portfolio,Linkedin,Dribbble,Github,Kerala on road">
+	<title>KOR - Druhin</title>
+	<link rel="stylesheet" href="https://use.typekit.net/hxi8bqp.css">
+	<link rel="shortcut icon" href="kor-assets/favicon.ico">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			overflow-x: hidden;
+			min-height: 100vh;
+			background: linear-gradient(to bottom, #000428, #302b63);
+		}
+
+
+		::-webkit-scrollbar {
+			background: #000;
+			width: 0.5vw;
+		}
+
+		::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 10px #00000070;
+			border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: linear-gradient(to bottom, #302b63, #000428);
+		}
+
+		.top-menu {
+			top: 0;
+			opacity: 0;
+			width: 100vw;
+			background-color: #000428;
+			display: flex;
+			z-index: 10;
+			position: fixed;
+			height: 9.5vh;
+			animation: easein3 0.5s forwards 3s ease-in;
+		}
+
+
+		@keyframes easein3 {
+			0% {
+				transform: translateY(-100%);
+				opacity: 0;
+			}
+
+			100% {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+
+		.logo {
+			margin-top: 3vh;
+			width: 6.71vw;
+			margin-left: 2vw;
+		}
+
+		.resume {
+			position: absolute;
+			right: 0;
+			margin-top: 3vh;
+			width: 6vw;
+			margin-right: 2vw;
+		}
+
+		h2 {
+			margin-top: 25vh;
+			background-color: #ffffff00;
+			font-family: acumin-pro, HelveticaNeue;
+			font-size: 6vh;
+			font-weight: lighter;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.2;
+			letter-spacing: normal;
+			text-align: center;
+			color: #ffffff;
+			animation: easein 1s forwards 0s ease-in;
+		}
+
+		@keyframes easein {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		h2 b {
+			border-bottom: 1.5px solid currentColor;
+		}
+
+		h3 {
+			margin-left: 35vw;
+			width: 30vw;
+			margin-top: 5vh;
+			font-family: acumin-pro, HelveticaNeue;
+			font-size: 2.5vh;
+			font-weight: lighter;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.2;
+			letter-spacing: normal;
+			text-align: center;
+			color: #c9c9c9;
+			opacity: 0;
+			animation: easein 1s forwards 1s linear;
+		}
+
+		h3 b {
+			color: #ffffff;
+		}
+
+		.hero-img {
+			opacity: 0;
+			margin-top: 5vh;
+			margin-left: 20vw;
+			width: 60vw;
+			animation: easein2 0.5s forwards 2s ease-in-out;
+		}
+
+		@keyframes easein2 {
+			0% {
+				transform: translateY(60%);
+				opacity: 0;
+			}
+
+			100% {
+				transform: translateY(0%);
+				opacity: 1;
+			}
+		}
+
+		h4 {
+			opacity: 0;
+			margin-top: 10vh;
+			background-color: #ffffff00;
+			font-family: acumin-pro, HelveticaNeue;
+			font-size: 4vh;
+			font-weight: lighter;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.2;
+			letter-spacing: normal;
+			text-align: center;
+			color: #ffffff;
+			animation: easein2 0.5s forwards 2s ease-in-out;
+		}
+
+		h4 b {
+			border-bottom: 1.5px solid currentColor;
+		}
+
+		h5 {
+			opacity: 0;
+			margin-left: 29vw;
+			width: 42vw;
+			margin-top: 4vh;
+			font-family: acumin-pro, HelveticaNeue;
+			font-size: 2.5vh;
+			font-weight: lighter;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.2;
+			letter-spacing: normal;
+			text-align: center;
+			color: #c9c9c9;
+			animation: easein2 0.5s forwards 2s ease-in-out;
+		}
+
+		.h5other {
+			margin-top: 2.5vh;
+		}
+
+		.hero-img2 {
+			opacity: 0;
+			margin-top: 5vh;
+			margin-left: 35vw;
+			width: 30vw;
+			animation: easein2 0.5s forwards 2s ease-in-out;
+		}
+
+		.tools {
+			opacity: 0;
+			margin-top: 5vh;
+			margin-left: 42.5vw;
+			width: 15vw;
+			animation: easein2 0.5s forwards 2s ease-in-out;
+		}
+
+		.github {
+			opacity: 0;
+			margin-top: 3vh;
+			margin-left: 42.5vw;
+			width: 15vw;
+			animation: easein2 0.5s forwards 2s ease-in-out;
+		}
+
+		h5 a {
+			text-decoration: none;
+		}
+
+		.back {
+			margin-top: 12vh;
+			margin-bottom: 10vh;
+		}
+
+
+
+
+		@media(max-width : 1080px) {
+			.top-menu {
+				height: 7.5vh;
+			}
+
+			.logo {
+				margin-top: 2.65vh;
+				width: 15.71vw;
+				margin-left: 4vw;
+			}
+
+			.resume {
+				position: absolute;
+				right: 0;
+				margin-top: 2.65vh;
+				width: 15vw;
+				margin-right: 4vw;
+			}
+
+			h2 {
+				margin-top: 20vh;
+				font-size: 3.8vh;
+			}
+
+			h3 {
+				margin-left: 15vw;
+				width: 70vw;
+				margin-top: 7.5vh;
+				font-size: 2vh;
+			}
+
+			.hero-img {
+				margin-top: 6vh;
+				margin-left: 5vw;
+				width: 90vw;
+			}
+
+			h4 {
+				margin-top: 10vh;
+				font-size: 2.5vh;
+			}
+
+			h5 {
+				margin-left: 15vw;
+				width: 70vw;
+				margin-top: 4vh;
+				font-size: 2vh;
+
+			}
+
+			.h5other {
+				margin-top: 2vh;
+			}
+
+			.hero-img2 {
+				margin-top: 5vh;
+				margin-left: 27.5vw;
+				width: 45vw;
+			}
+
+			.tools {
+				margin-top: 4vh;
+				margin-left: 35vw;
+				width: 30vw;
+			}
+
+			.github {
+				margin-top: 2vh;
+				margin-left: 35vw;
+				width: 30vw;
+			}
+
+			.back {
+				margin-top: 10vh;
+				margin-bottom: 8vh;
+			}
+
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+
+	<div class="top-menu">
+		<a href="https://druh.in"><img class="logo" src="kor-assets/logo.PNG"></a>
+		<a href="https://drive.google.com/file/d/1cKwaXFuobNxabyCev4IlQ1FtbUMGHTPm/view?usp=sharing" target="_blank"><img class="resume" src="kor-assets/Resume.svg"></a>
+	</div>
+
+	<h2><b>Kerala On Road</b></h2>
+
+	<h3>An online <b>Automobile</b> portal based in <b>Kerala</b> offering various <b>services</b> related to Automobiles.</h3>
+
+	<img class="hero-img" loading="lazy" src="kor-assets/img1.png">
+
+	<h4><b>My Role</b></h4>
+	<h5>UX Designer Intern</h5>
+	<h5 class="h5other">Redesigning the Mobile website, creating prototypes, and converting the designs to markup code</h5>
+
+	<h4><b>Description</b></h4>
+	<h5>The venture 'Kerala On Road', by Premium Comtechs
+		Pvt.Ltd, was entrenched in 2014 with a noble vision of
+		bridging the gap between automobile sellers and buyers.
+		Initiated by a group of experts having all-embracing
+		experience in the concerned niche.
+	</h5>
+	<h5>The platform is focused to conduct trade of new as well
+		as used cars and bikes, by providing most reliable and
+		accurate information about different vehicles thus helping
+		users in making the selection process judicious.
+		Equipping the owners and buyers with comprehensive
+		and unbiased information about the vehicles, by
+		showcasing expert reviews, owner reviews and detailed
+		specifications.
+	</h5>
+	<h5>The main goal is to create an ultimate online solution
+		when it comes to the selling and purchasing of vehicles,
+		quickly and easily.</h5>
+
+
+	<h5>'Kerala On Road' had more than 60% of their user traffic
+		from mobile devices. But their mobile site had a pretty
+		low user-engagement in compared to their desktop site.
+	</h5>
+	<h5>There was just too much data in one single place, and so
+		it was pretty hard for the user to find a particular thing,
+		which he/she came to look for.</h5>
+
+	<h4><b>Design Thinking</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img2.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img2.png"></a>
+
+	<h5>The idea was pretty simple and straight-forward. Users
+		were having a hard time to find a particular section
+		regarding a vehicle.
+
+	</h5>
+	<h5>And so I simplified the page contents. Sorted them in the
+		order of their importance and wants of the user (From the
+		most important and most searched thing at the top, to
+		the least important one).
+	</h5>
+	<h5>Increased the size of those elements which the user
+		wants to see first.</h5>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img3.png" target="_blank"><img class="hero-img2" loading="lazy" src="kor-assets/img3.png"></a>
+
+	<h5>Created a floating action button, with a Chat option. So
+		that if the user still faces any problem in finding any of
+		the information related to the vehicle, there's always a
+		customer executive to assist and help them out.
+		So in this way we're not losing any of our users.</h5>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img4.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img4.png"></a>
+
+	<h5>Created a dedicated CTA button, to catch the attention of
+		the users. Here, its the 'Get Onroad Price' button, whose
+		work is, not only just showing the on road price of the
+		vehicle according to the user's location, but also
+		maintaining the website's goal, i.e. bridging the gap
+		between the buyers and the sellers. </h5>
+
+	<h4><b>Quickview Page</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img5.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img5.png"></a>
+
+	<h5>Added all the information related to the vehicle, in one single page, in a short simplified way.<br><br>
+
+		Used graphical assets in the specification section, to increase the user experience.<br><br>
+
+		Showed the variants of the vehicle in a card format, with a horizontal scroll to free up space.<br><br>
+
+		Used 'Read more' option, for the user to read through the details in a separate page, and thereby increasing the engagement.<br><br>
+
+		Provided News and Review regarding the specific vehicle at a glance.<br><br>
+
+		Added in the 'Compare with' section, for the user to go through a quick comparison with the current vehicle and one from the related vehicle list.<br><br>
+
+		Added the FAQ section, to solve their most asked questions regarding the vehicle.<br><br>
+
+		Increased the interaction with the users, by providing a separate 'question asking' option.<br><br>
+
+		Dedicated floating chat button, to assist the users, and making the helping process smooth.
+
+	</h5>
+
+
+	<h4><b>Specifications Page</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img6.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img6.png"></a>
+
+	<h5>Added all the specification related information in one single page, in a short simplified way.<br><br>
+
+		Used graphical assets in the specification section, to increase the user experience.<br><br>
+
+		Showed the details of the specifications in a drop-down format, thereby utilizing the space.<br><br>
+
+		Created a CTA button for showing the specifications of the vehicle, according to its variants, and thus redirecting to a separate page, and increasing the user engagement.<br><br>
+
+		Dedicated floating chat button, to assist the users, and making the helping process smooth.
+
+	</h5>
+
+
+	<h4><b>Variants Page</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img7.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img7.png"></a>
+
+	<h5>Added all the vehicle variants related information in one
+		single page, in a short simplified way.
+		<br><br>
+
+		Used tab slider bar, to slide in through the different
+		variant types.
+		<br><br>
+
+		Added an extra feature to compare between the variants
+		of a single vehicle.
+		<br><br>
+
+		Used Toggle switch, for the user to select the specific
+		variants to compare.
+		<br><br>
+
+		Created a CTA button for booking test drive, which
+		connects the seller with the buyer/user.
+
+	</h5>
+
+
+	<h4><b>Dealers Page</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img8.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img8.png"></a>
+
+	<h5>Added all the dealer related information in one
+		single page, in a short simplified way.
+
+		<br><br>
+
+		Created a separate 'dealer search' section, where we need to accept the vehicle brand name, and the desired search location from the user, using a drop down suggestion menu.
+		<br><br>
+
+		Showed results in a tabular card format, along with all the important details of the dealers.
+
+		<br><br>
+
+		Also showed the location from the dealer search results in the map.
+
+
+	</h5>
+
+
+	<h4><b>Compare Page</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img9.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img9.png"></a>
+
+	<h5>Introduced the feature of comparing 3 vehicles at once.<br><br>
+
+		Added all the vehicle comparing related information in one
+		single page, in a short simplified way.<br><br>
+
+		Used visuals to show the comparison of the vehicles.<br><br>
+
+		Showcased the specification-difference in a drop-down menu,
+		thereby making use of the space.<br><br>
+
+		Added the News and Reviews section, related to the vehicles
+		being compared.<br><br>
+
+		Added the Gallery section, related to the vehicles being
+		compared.<br><br>
+
+		Provided a separate section, with related vehicle comparison,
+		in a card format with horizontal scrolling , to save space.</h5>
+
+
+	<h4><b>News / Reviews Page</b></h4>
+
+	<a href="https://raw.githubusercontent.com/Druhin13/Portfolio-Kerala-On-Road/master/assets/img10.png" target="_blank"><img class="hero-img" loading="lazy" src="kor-assets/img10.png"></a>
+
+	<h5>Introduced the search bar to this page.<br><br>
+
+		Added all the news and reviews related information in one
+		single page, in a short simplified way.<br><br>
+
+		Used visuals to show the news headlines.<br><br>
+
+		Showcased the trending news in a separate section using horizontal slider to save up the space.<br><br>
+
+		Added the Paging system to the vertical news section.<br><br>
+
+		Showcased reviews and related videos, in card format through a horizontal scroll system.<br><br>
+
+		Added a dedicated CTA button to read the whole page in Malayalam (Requested by Team, as it is a Kerala based company)</h5>
+
+
+	<h4><b>Result / Achievement</b></h4>
+
+	<h5>Collaborated with the Back end team to deploy new features.<br><br>
+
+		Decreased Page load time by ~30%<br><br>
+
+		Increased the User engagement by 25%<br><br>
+
+		Completed tasks at an average of 10% before deadline.</h5>
+
+
+	<h4><b>Tools / Languages Used</b></h4>
+
+	<img class="tools" loading="lazy" src="kor-assets/tools.png">
+
+	<a href="https://github.com/users/Druhin13/projects/1" target="_blank"><img class="github" loading="lazy" src="assets/view%20on%20github.png"></a>
+
+	<a href="https://druh.in">
+		<h5 class="back"><u>Go back to Projects</u></h5>
+	</a>
+
+
+</body>
+
+</html>
